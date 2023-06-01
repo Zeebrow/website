@@ -1,0 +1,89 @@
+/* 
+nice color pairs
+****************
+dark 
+    #3b3b4f 
+    #0a0a23
+    background-color: #1b1b32;
+    color: #f5f6f7 ;
+    textcolor
+    #dfdf2e
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    margin: 0;
+}
+
+h1 {
+    color: #f5f6f7;
+    text-align: center;
+}
+
+.page-description {
+  width: 100%;
+  text-align: center;
+}
+
+.non-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adspace {
+    border: 2px solid yellow;
+    background-color: pink;
+    width: 300px;
+    height: 90px;
+}
+
+content {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-divider {
+  width: 5%;
+  border: 2px solid yellow;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.sidebar-left {
+  width: 20%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 10px;
+  gap: 16px;
+}
+
+.sidebar-right {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 10px;
+  gap: 16px;
+}
+
+main {
+  min-width: 50%;
+}
+
+content p {
+    font-size: 20px;
+    padding: 40px;
+}
+
+/* 
+menu bar 
+*/
