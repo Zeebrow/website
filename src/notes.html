@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--notes.html-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <link href="site-menubar-style.css" rel="stylesheet">
+        <title>notes: my website</title>
+    </head>
+
+    <body>
+        <!--------------------------- site-menubar --------------------------->
+        <!-- <script src="site-header.js"></script> -->
+
+        <div class="site-menubar">
+            <span class="left">
+                <!-- maybe change to first-item-left or someth
+                or use a pseudo css selector ::after, or...
+                ...idk somehow remove need for "filler"
+                -->
+                <div class="menu-item">
+                    <a href="/">Home</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <a href="/notes.html">HTML notes</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <a href="/project/">project</a>
+                </div>
+            </span>
+            <span class="center">
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <div>
+                        <a href="/">
+                            <img 
+                                src="img/site-logo.jpeg"
+                                alt="home"
+                                height="50px"
+                                width="50px"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            </span>
+            <span class="right">
+                <div class="menu-item">
+                    <a href="/about.html">about</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <a href="/thanks.html">thanks</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <label for="darkmode-toggle">
+                        <img src="" width="15px" height="15px">
+                        <input type="checkbox" name="darkmode-toggle">
+                        <img src="" width="15px" height="15px">
+                    </label>
+                </div>
+            </span>
+        </div>
+
+        <!--------------------------- page content --------------------------->
+        <!--<script src="notes.js"></script>-->
+        
+        <h1>HTML/CSS notes</h1>
+        <p class="page-description">Thanks to <a href="freecodecamp.org">freeCodeCamp.org</a>!</p>
+        </div>
+        <content>
+            <container class="sidebar-left">
+                <p>Topics</p>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+                <img alt="sleppy cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+                <img alt="height and width of the goods" src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png">
+                <img alt="border > padding" src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png">
+                <img alt="adjacent elements need margins; nested elements 'break rules'..." src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png">
+                <img alt="must be play cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg">
+                <img alt="attentive cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
+                <img alt="fel aslep stalkin cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg">
+                <img alt="blue eyes white cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg">
+                <img alt="family movie night" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg">
+                <img alt="on teh job cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg">
+                <img alt="pozin cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg">
+                <img alt="i have not seen this cat, i no not what you speak of cat" src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg">
+            </container>
+
+            <div class="content-divider"></div>
+            <main>
+                <p>Order of variables for the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a> ... thingy.</p>
+                <p>things I want to remember:</p>
+                <ul>
+                    <li>everytime you make a new html element, make an associated css selector. Waiting until the dom is full of elements to make css is cumbersome?</li>
+                    <li>consider wrapping "sections" of a webpage in their own container elements</li>
+                    <li>consider setting a font-size on the html root, and using rem units to change font size in the document. seems like this would help improve "stylistic" consistency</li>
+                </ul>
+                <p>new things that probably won't stick:</p>
+                <ul>
+                    <li>giving a contaning element padding: gives child elements something to push-off of, but changes the parent's dimensions. Use overflow: hidden; instead of padding:!</li>
+                    <li>filter: blur(3px) </li>
+                    <li>box-shadow: 0 0 3px 3px rgb()</li>
+                    <li>border-radius: 9px;</li>
+                    <li>transform: rotate(0.6deg);</li>
+                    <li>* {box-sizing: border-box;} to "normalize"</li>
+                    <li>use a meta tag with name=viewport content="width=device-width,initial-scale=1" </li>
+                    <li>text-transform: uppercase;</li>
+                    <li>object-fit: cover; to maintain image aspect ratio, preventing them from distoring</li>
+                    <li>font-weight: 800;</li>
+                    <li>letter-spacing: 0.15px;</li>
+                    <li>:not pseudo selector</li>
+                    <li>{?}link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"{?} and font-family: "Open Sans"</li>
+                    <li>accesskey attribute sets keyboard shortcuts for things like buttons and links!</li>
+                </ul>
+                <p> HTML/CSS facts</p>
+                <ul>
+                </ul>
+                <container class="adspace">
+                    <p>Thank you for not using adblock!</p>
+                </container>
+            </main>
+            <div class="content-divider"></div>
+            <container class="sidebar-right">
+            </container>
+        </content>
+        <footer>
+            <address>
+                hi mom 👋
+            </address>
+        </footer>
+    </body>
+    <script src="site.js"></script>
+</html>

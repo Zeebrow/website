@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<!--index.html-->
+<!--thanks.html-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
         <link href="site-menubar-style.css" rel="stylesheet">
-        <title>my website</title>
+        <title>thanks: my website</title>
     </head>
 
     <body>
         <!--------------------------- site-menubar --------------------------->
         <!-- <script src="site-header.js"></script> -->
-
+        
         <div class="site-menubar">
             <span class="left">
                 <!-- maybe change to first-item-left or someth
@@ -28,7 +28,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="menu-item">
-                    <a href="/project/">project</a>
+                    <!-- filler -->
                 </div>
             </span>
             <span class="center">
@@ -66,41 +66,36 @@
             </span>
         </div>
 
-
         <!--------------------------- page content --------------------------->
-        <h1 id="headline">Welcome!</h1>
-        <p id="headline-desc" class="page-description"></p>
-        <div class="adspace">
-            <p class="ad">Thank you for not blocking ads!</p>
-        </div>
-        <div class="pride-flag">
+        <h1>Biblibidography</h1>
+        <p class="page-description">I finally made it</p>
+
         <content>
             <container class="sidebar-left">
             </container>
             <div class="content-divider"></div>
+            
             <main>
-                <p>This is where my content would go.</p>
-                <P>IF I HAD ANY!!!</p>
+                <p>Check out these people and the work they do:</p>
+                <div class="cool-person">
+                    <p>👍 you</p>
+                    <ul>
+                        <li><a href="">your site</a></li>
+                        <li><a href="">your github</a></li>
+                        <li><a href="">your youtube</a></li>
+                        <li><a href="">etc</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <p>I use these technologies for my work:</p>
+                <button>add my stuff</button>
+
             </main>
+
             <div class="content-divider"></div>
             <container class="sidebar-right">
             </container>
         </content>
-        <footer>
-            <address>
-                hi mom 👋
-            </address>
-        </footer>
     </body>
-    <script>
-        let pageHeadline = document.getElementById("headline");
-        let headlineDesc = document.getElementById("headline-desc");
-        if (document.location.host === "zbrow.io") {
-            pageHeadline.innerHTML = `Welcome to ${document.location.host}!`
-            headlineDesc.innerHTML = `I am zbrow, and this is my website.`;
-        } else {
-            pageHeadline.innerHTML = `Welcome!`
-        }
-    </script>
     <script src="site.js"></script>
 </html>

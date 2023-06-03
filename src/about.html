@@ -1,11 +1,91 @@
 <!DOCTYPE html>
+<!--about.html-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
-        <title>my website</title>
+        <link href="site-menubar-style.css" rel="stylesheet">
+        <title>about: my website</title>
     </head>
+
     <body>
+        <!--------------------------- site-menubar --------------------------->
+        <!-- <script src="site-header.js"></script> -->
+
+        <div class="site-menubar">
+            <span class="left">
+                <!-- maybe change to first-item-left or someth
+                or use a pseudo css selector ::after, or...
+                ...idk somehow remove need for "filler"
+                -->
+                <div class="menu-item">
+                    <a href="/">Home</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <a href="/notes.html">HTML notes</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <a href="/project/">project</a>
+                </div>
+            </span>
+            <span class="center">
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <div>
+                        <a href="/">
+                            <img 
+                                src="img/site-logo.jpeg"
+                                alt="home"
+                                height="50px"
+                                width="50px"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            </span>
+            <span class="right">
+                <div class="menu-item">
+                    <a href="/about.html">about</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <a href="/thanks.html">thanks</a>
+                </div>
+                <div class="divider"></div>
+                <div class="menu-item">
+                    <label for="darkmode-toggle">
+                        <img src="" width="15px" height="15px">
+                        <input type="checkbox" name="darkmode-toggle">
+                        <img src="" width="15px" height="15px">
+                    </label>
+                </div>
+            </span>
+        </div>
+
+
+        <!--------------------------- page content --------------------------->
+        <h1>About mzborowski.com</h1>
+        <p class="page-description">I am learning front-end webdevelopment</p>
+        <content>
+            <container class="sidebar-left">
+            </container>
+            <div class="content-divider"></div>
+            <main>
+                <p>There's nothing here. Check back later!</p>
+            </main>
+            <div class="content-divider"></div>
+            <container class="sidebar-right">
+            </container>
+        </content>
+        <footer>
+            <address>
+                hi mom 👋
+            </address>
+        </footer>
     </body>
+    <script src="site.js"></script>
 </html>

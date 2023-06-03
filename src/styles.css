@@ -13,6 +13,7 @@ dark
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     color: #f5f6f7;
     margin: 0;
 }
+
 
 h1 {
     color: #f5f6f7;
@@ -31,19 +33,30 @@ h1 {
   text-align: center;
 }
 
-.non-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .adspace {
-    border: 2px solid yellow;
+    border-top: 18px solid lightblue;
+    border-bottom: 18px solid lightblue;
     background-color: pink;
-    width: 300px;
-    height: 90px;
+    max-width: 500px;
+    height: 100px;
+    margin: 0 auto;
+}
+.ad {
+  color: lightblue;
+  background-color: white;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  line-height: 0.8;
 }
 
+.pride-flag-1 {
+
+}
+
+/* content and children */
 content {
   display: flex;
   flex-direction: row;
@@ -51,14 +64,15 @@ content {
 
 .content-divider {
   width: 5%;
-  border: 2px solid yellow;
+  border: 2px solid blue;
   padding-left: 15px;
   padding-right: 10px;
 }
 
 .sidebar-left {
-  width: 20%;
-  background-color: white;
+    border: 2px solid yellow;
+    min-width: 160px;
+    width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -67,7 +81,9 @@ content {
 }
 
 .sidebar-right {
-  width: 20%;
+    border: 2px solid red;
+    min-width: 160px;
+    width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -79,7 +95,7 @@ main {
   min-width: 50%;
 }
 
-content p {
+content {
     font-size: 20px;
     padding: 40px;
 }
@@ -87,3 +103,16 @@ content p {
 /* 
 menu bar 
 */
+
+/* screen reader accessibility notes */
+/* .screenreader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} */
