@@ -1,3 +1,4 @@
 *.tar*
-src/img
+src/img/*
+!src/img/.gitignore
 build
