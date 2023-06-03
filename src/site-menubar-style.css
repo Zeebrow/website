@@ -9,6 +9,7 @@
   font-size: 1.1em;
   top: 0;
   flex-wrap: wrap;
+  overflow: scroll;
 }
 
 .site-menubar .left {
@@ -25,6 +26,7 @@
   justify-content: center;
   align-items: center;
   width: 20%;
+  overflow:hidden;
 }
 
 .site-menubar .right {
