@@ -75,7 +75,25 @@
             </container>
             <div class="content-divider"></div>
             <main>
-                <p>There's nothing here. Check back later!</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>last updated</td>
+                            <td> : </td>
+                            <td>{{BUILD_DATE}}</td>
+                        </tr>
+                        <tr>
+                            <td>version</td>
+                            <td> : </td>
+                            <td>{{GIT_HASH}}</td>
+                        </tr>
+                        <tr>
+                            <td>source</td>
+                            <td> : </td>
+                            <td>{{GIT_SRC}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </main>
             <div class="content-divider"></div>
             <container class="sidebar-right">
@@ -84,6 +102,7 @@
         <footer>
             <hr />
             <address>
+                last update on {{BUILD_DATE}} <br />
                 hi mom 👋
             </address>
         </footer>

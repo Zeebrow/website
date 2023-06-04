@@ -1,4 +1,5 @@
 *.tar*
 zbrow.io/img/*
 !zbrow.io/img/.gitignore
-build
+dist
+stage

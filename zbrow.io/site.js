@@ -33,6 +33,7 @@ function setSmolScreenContent() {
 
         document.body.prepend(seeDesktopPageBanner);
         document.body.prepend(siteLogoLink);
+
     }
 }
 
