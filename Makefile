@@ -1,4 +1,4 @@
-ARTIFACT := website-src.tar.gz
+ARTIFACT := zbrow.io.tar.gz
 CONTAINER_NAME := website
 
 dev-up:
@@ -9,7 +9,7 @@ dev-down:
 
 package: clean
 	mkdir -p build
-	tar -C src/ -czf build/$(ARTIFACT) ./
+	tar -czf build/$(ARTIFACT) zbrow.io/
 	sha256sum build/$(ARTIFACT) > build/SHA256SUMS
 
 clean:

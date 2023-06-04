@@ -1,0 +1,98 @@
+.pride-flag-2 {
+}
+
+.pride-flag-2> .blew {
+  background-color: lightblue;
+  height: 20px;
+}
+
+.pride-flag-2> .pink {
+  background-color: pink;
+  height: 20px;
+}
+
+.pride-flag-2> .white{
+    text-align: center;
+    color: black;
+  background-color: #fff;
+  height: 20px;
+}
+
+.pride-flag-side {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+}
+
+.pride-flag-side > .red {
+  background-color: red;
+  width: 25px;
+}
+
+.pride-flag-side > .orange {
+  background-color: orange;
+  width: 25px;
+}
+
+.pride-flag-side > .yellow {
+    display: flex;
+    align-items: center;
+  background-color: yellow;
+  width: 25px;
+}
+.pride-flag-side > .yellow > p {
+    margin-left: -150px;
+    margin-right: -160px;
+  color: black;
+  transform: rotate(-90deg);
+}
+
+.pride-flag-side > .green {
+  background-color: green;
+  width: 25px;
+}
+
+.pride-flag-side > .blue {
+  background-color: blue;
+  width: 25px;
+}
+
+.pride-flag-side > .viopurp {
+  width: 25px;
+  background-color: purple;
+}
+
+.pride-flag {
+}
+
+.pride-flag > .red {
+  background-color: red;
+  height: 20px;
+}
+
+.pride-flag > .orange {
+  background-color: orange;
+  height: 20px;
+}
+
+.pride-flag > .yellow {
+  color: black;
+  text-align: center;
+  background-color: yellow;
+  height: 20px;
+}
+
+.pride-flag > .green {
+  background-color: green;
+  height: 20px;
+}
+
+.pride-flag > .blue {
+  background-color: blue;
+  height: 20px;
+}
+
+.pride-flag > .viopurp {
+  background-color: purple;
+  height: 20px;
+}

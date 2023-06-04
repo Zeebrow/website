@@ -1,4 +1,4 @@
 *.tar*
-src/img/*
-!src/img/.gitignore
+zbrow.io/img/*
+!zbrow.io/img/.gitignore
 build

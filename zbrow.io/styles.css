@@ -22,7 +22,6 @@ body {
     margin: 0;
 }
 
-
 h1 {
     color: #f5f6f7;
     text-align: center;
@@ -33,33 +32,22 @@ h1 {
   text-align: center;
 }
 
-.adspace {
-    border-top: 18px solid lightblue;
-    border-bottom: 18px solid lightblue;
-    background-color: pink;
-    max-width: 500px;
-    height: 100px;
-    margin: 0 auto;
-}
-.ad {
-  color: lightblue;
-  background-color: white;
-  margin-top: 20px;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 100%;
-  line-height: 0.8;
+.adspace-horiz {
+  margin: 10px auto;
+  max-width: 500px;
+  border: 5px solid #fff;
 }
 
-.pride-flag-1 {
-
+.adspace-vert {
+  max-height: 600px;
+  border: 5px solid #fff;
 }
 
 /* content and children */
 content {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .content-divider {
@@ -87,7 +75,6 @@ content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 10px 10px;
   gap: 16px;
   overflow: hidden;
 }
