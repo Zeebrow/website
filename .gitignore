@@ -3,3 +3,4 @@ zbrow.io/img/*
 !zbrow.io/img/.gitignore
 dist
 stage
+tmp
