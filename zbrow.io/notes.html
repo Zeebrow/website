@@ -71,61 +71,83 @@
 
         <!--------------------------- page content --------------------------->
         <!--<script src="notes.js"></script>-->
-        
-        <h1>HTML/CSS notes</h1>
-        <p class="page-description">Thanks to <a href="freecodecamp.org">freeCodeCamp.org</a>!</p>
-        </div>
-        <content>
-            <container class="sidebar-left">
-                <p>Topics</p>
-                <ul>
-                    <li class="side-menu-item side-menu-hilite"><a href="#HTML">HTML</a></li>
-                    <li class="side-menu-item side-menu-hilite"><a href="#CSS">CSS</a></li>
-                    <li class="side-menu-item side-menu-hilite"><a href="#JavaScript">JavaScript</a></li>
-                </ul>
-            </container>
 
-            <div class="content-divider"></div>
-            <main>
-                <div id="HTML">
-                    <h2>HTML</h2>
+        <div class="vert-align">
+            <h1>HTML/CSS notes</h1>
+            <div class="adspace adspace-horiz">
+                <a href="https://freecodecamp.org" target="_blank">
+                    <img
+                        src="img/fcc_primary_large.svg"
+                        alt="freecodecamp logo"
+                        loading="lazy"
+                        class="hero-img"
+                        width="450"
+                        height="100"
+                    />
+                </a>
+            </div>
+            <p class="adspace-subtext">Thanks to <a href="https://freecodecamp.org" target="_blank">freeCodeCamp.org</a><img 
+                    class="inline-img-micro"
+                    src="img/fcc_primary_small.svg"
+                    alt="freecodecamp logo"
+                    loading="lazy"
+                    class="hero-img"
+                    width="15"
+                    height="15"
+                >!</p>
+            <content>
+                <container class="sidebar-left">
+                    <p>Topics</p>
                     <ul>
+                        <li class="side-menu-item side-menu-hilite"><a href="#HTML">HTML</a></li>
+                        <li class="side-menu-item side-menu-hilite"><a href="#CSS">CSS</a></li>
+                        <li class="side-menu-item side-menu-hilite"><a href="#JavaScript">JavaScript</a></li>
                     </ul>
-                </div>
+                </container>
 
-                <div id="CSS">
-                    <h2>CSS</h2>
-                    <ul>
-                        <li>consider setting a <div class="md-inline-code">font-size</div> on the html root, and using <div class="md-inline-code">rem</div> units to change font size in the document</li>
-                        <li>giving a contaning element <div class="md-inline-code">padding:</div> gives child elements something to push-off of, but changes the parent's dimensions. Use <div class="md-inline-code">overflow: hidden;</div> instead!</li>
-                        <li>use a meta tag with <div class="md-inline-code">name=viewport</div> and <div class="md-inline-code">content="width=device-width,initial-scale=1"</div> to ____________.</li>
-                        <li>object-fit: cover; to maintain image aspect ratio, preventing them from distoring</li>
-                        <li>The <div class="md-inline-code">accesskey=""</div> attribute sets keyboard shortcuts for things like buttons and links</li>
-                    </ul>
-                </div>
-
-                <div id="JavaScript">
-                    <h2>JavaScript</h2>
-                    <ul>
-                        <li>If you <div class="md-inline-code">export</div> a function in a script, you can't also call it from within that script. You must ______.</li>
-                    </ul>
-                </div>
-                <div class="adspace adspace-horiz">
-                    <div class="pride-flag">
-                        <div class="red"></div>
-                        <div class="orange"></div>
-                        <div class="yellow">Thank you for not blocking ads!</div>
-                        <div class="green"></div>
-                        <div class="blue"></div>
-                        <div class="viopurp"></div>
+                <div class="content-divider"></div>
+                <main>
+                    <div id="HTML">
+                        <h2>HTML</h2>
+                        <ul>
+                        </ul>
                     </div>
-                </div>
-            </main>
-            <div class="content-divider"></div>
-            <container class="sidebar-right">
-                <img alt="adjacent elements need margins; nested elements 'break rules'..." src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png">
-            </container>
-        </content>
+
+                    <div id="CSS">
+                        <h2>CSS</h2>
+                        <ul>
+                            <li>consider setting a <div class="md-inline-code">font-size</div> on the html root, and using <div class="md-inline-code">rem</div> units to change font size in the document</li>
+                            <li>giving a contaning element <div class="md-inline-code">padding:</div> gives child elements something to push-off of, but changes the parent's dimensions. Use <div class="md-inline-code">overflow: hidden;</div> instead!</li>
+                            <li>use a meta tag with <div class="md-inline-code">name=viewport</div> and <div class="md-inline-code">content="width=device-width,initial-scale=1"</div> to ____________.</li>
+                            <li>object-fit: cover; to maintain image aspect ratio, preventing them from distoring</li>
+                            <li>The <div class="md-inline-code">accesskey=""</div> attribute sets keyboard shortcuts for things like buttons and links</li>
+                        </ul>
+                    </div>
+
+                    <div id="JavaScript">
+                        <h2>JavaScript</h2>
+                        <ul>
+                            <li>If you <div class="md-inline-code">export</div> a function in a script, you can't also call it from within that script. You must ______.</li>
+                        </ul>
+                    </div>
+
+                    <div class="adspace adspace-horiz">
+                        <div class="pride-flag">
+                            <div class="red"></div>
+                            <div class="orange"></div>
+                            <div class="yellow">Thank you for not blocking ads!</div>
+                            <div class="green"></div>
+                            <div class="blue"></div>
+                            <div class="viopurp"></div>
+                        </div>
+                    </div>
+                </main>
+                <div class="content-divider"></div>
+                <container class="sidebar-right">
+                    <img alt="adjacent elements need margins; nested elements 'break rules'..." src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png">
+                </container>
+            </content>
+        </div>
         <footer>
             <hr />
             <address>
