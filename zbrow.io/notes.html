@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
         <link href="pride.css" rel="stylesheet">
-        <link href="site-menubar-style.css" rel="stylesheet">
         <title>notes: my website</title>
     </head>
 
@@ -16,20 +15,16 @@
 
         <div class="site-menubar">
             <span class="left">
-                <!-- maybe change to first-item-left or someth
-                or use a pseudo css selector ::after, or...
-                ...idk somehow remove need for "filler"
-                -->
-                <div class="menu-item">
-                    <a href="/">Home</a>
-                </div>
+                <a class="menu-item" href="/">
+                    Home
+                </a>
+                <div class="divider"></div>
+                <a class="menu-item" href="/notes.html">
+                    Notes
+                </a>
                 <div class="divider"></div>
                 <div class="menu-item">
-                    <a href="/notes.html">HTML notes</a>
-                </div>
-                <div class="divider"></div>
-                <div class="menu-item">
-                    <a href="/project/">project</a>
+                    <!-- filler -->
                 </div>
             </span>
             <span class="center">
@@ -49,13 +44,14 @@
                 <div class="divider"></div>
             </span>
             <span class="right">
-                <div class="menu-item">
-                    <a href="/about.html">about</a>
-                </div>
+                <a class="menu-item" href="/about.html">
+                    About
+                </a>
+                
                 <div class="divider"></div>
-                <div class="menu-item">
-                    <a href="/thanks.html">thanks</a>
-                </div>
+                <a class="menu-item" href="/thanks.html">
+                    Thanks
+                </a>
                 <div class="divider"></div>
                 <div class="menu-item">
                     <label for="darkmode-toggle">
@@ -77,45 +73,37 @@
             <container class="sidebar-left">
                 <p>Topics</p>
                 <ul>
-                    <li>html</li>
-                    <li>css</li>
-                    <li>javascript</li>
+                    <li><a class="menu-item" href="#HTML">HTML</a></li>
+                    <li><a class="menu-item" href="#CSS">CSS</a></li>
+                    <li><a class="menu-item" href="#JavaScript">JavaScript</a></li>
                 </ul>
             </container>
 
             <div class="content-divider"></div>
             <main>
-                <p>Order of variables for the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a> ... thingy.</p>
-                <p>things I want to remember:</p>
-                <ul>
-                    <li>everytime you make a new html element, make an associated css selector. Waiting until the dom is full of elements to make css is cumbersome?</li>
-                    <li>consider wrapping "sections" of a webpage in their own container elements</li>
-                    <li>consider setting a font-size on the html root, and using rem units to change font size in the document. seems like this would help improve "stylistic" consistency</li>
-                </ul>
-                <p>new things that probably won't stick:</p>
-                <ul>
-                    <li>giving a contaning element padding: gives child elements something to push-off of, but changes the parent's dimensions. Use overflow: hidden; instead of padding:!</li>
-                    <li>filter: blur(3px) </li>
-                    <li>box-shadow: 0 0 3px 3px rgb()</li>
-                    <li>border-radius: 9px;</li>
-                    <li>transform: rotate(0.6deg);</li>
-                    <li>* {box-sizing: border-box;} to "normalize"</li>
-                    <li>use a meta tag with name=viewport content="width=device-width,initial-scale=1" </li>
-                    <li>text-transform: uppercase;</li>
-                    <li>object-fit: cover; to maintain image aspect ratio, preventing them from distoring</li>
-                    <li>font-weight: 800;</li>
-                    <li>letter-spacing: 0.15px;</li>
-                    <li>:not pseudo selector</li>
-                    <li>{?}link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"{?} and font-family: "Open Sans"</li>
-                    <li>accesskey attribute sets keyboard shortcuts for things like buttons and links!</li>
-                </ul>
-                <p> HTML/CSS notes</p>
-                <ul>
-                </ul>
-                <p>JavaScript notes</p>
-                <ul>
-                    <li>If you export a function in a script, you can't also call it from within that script. You must ______.</li>
-                </ul>
+                <div id="HTML">
+                    <h2>HTML</h2>
+                    <ul>
+                    </ul>
+                </div>
+
+                <div id="CSS">
+                    <h2>CSS</h2>
+                    <ul>
+                        <li>consider setting a <div class="md-inline-code">font-size</div> on the html root, and using <div class="md-inline-code">rem</div> units to change font size in the document</li>
+                        <li>giving a contaning element <div class="md-inline-code">padding:</div> gives child elements something to push-off of, but changes the parent's dimensions. Use <div class="md-inline-code">overflow: hidden;</div> instead!</li>
+                        <li>use a meta tag with <div class="md-inline-code">name=viewport</div> and <div class="md-inline-code">content="width=device-width,initial-scale=1"</div> to ____________.</li>
+                        <li>object-fit: cover; to maintain image aspect ratio, preventing them from distoring</li>
+                        <li>The <div class="md-inline-code">accesskey=""</div> attribute sets keyboard shortcuts for things like buttons and links</li>
+                    </ul>
+                </div>
+
+                <div id="JavaScript">
+                    <h2>JavaScript</h2>
+                    <ul>
+                        <li>If you <div class="md-inline-code">export</div> a function in a script, you can't also call it from within that script. You must ______.</li>
+                    </ul>
+                </div>
                 <div class="adspace adspace-horiz">
                     <div class="pride-flag">
                         <div class="red"></div>
@@ -129,8 +117,6 @@
             </main>
             <div class="content-divider"></div>
             <container class="sidebar-right">
-                <img alt="height and width of the goods" src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png">
-                <img alt="border > padding" src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png">
                 <img alt="adjacent elements need margins; nested elements 'break rules'..." src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png">
             </container>
         </content>

@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
         <link href="pride.css" rel="stylesheet">
-        <link href="site-menubar-style.css" rel="stylesheet">
         <title>my website</title>
     </head>
 
@@ -16,20 +15,16 @@
 
         <div class="site-menubar">
             <span class="left">
-                <!-- maybe change to first-item-left or someth
-                or use a pseudo css selector ::after, or...
-                ...idk somehow remove need for "filler"
-                -->
-                <div class="menu-item">
-                    <a href="/">Home</a>
-                </div>
+                <a class="menu-item" href="/">
+                    Home
+                </a>
+                <div class="divider"></div>
+                <a class="menu-item" href="/notes.html">
+                    Notes
+                </a>
                 <div class="divider"></div>
                 <div class="menu-item">
-                    <a href="/notes.html">HTML notes</a>
-                </div>
-                <div class="divider"></div>
-                <div class="menu-item">
-                    <a href="/project/">project</a>
+                    <!-- filler -->
                 </div>
             </span>
             <span class="center">
@@ -49,13 +44,14 @@
                 <div class="divider"></div>
             </span>
             <span class="right">
-                <div class="menu-item">
-                    <a href="/about.html">about</a>
-                </div>
+                <a class="menu-item" href="/about.html">
+                    About
+                </a>
+                
                 <div class="divider"></div>
-                <div class="menu-item">
-                    <a href="/thanks.html">thanks</a>
-                </div>
+                <a class="menu-item" href="/thanks.html">
+                    Thanks
+                </a>
                 <div class="divider"></div>
                 <div class="menu-item">
                     <label for="darkmode-toggle">
