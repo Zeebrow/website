@@ -167,7 +167,7 @@
                 "mailto:admin@mzborowski.com?",
                 "subject=Unexpected 404 error&",
                 `body=I was expecting content at ${document.URL}.`,
-                `The link I followed was from ${document.referrer}.`,
+                `The link I followed was from '${document.referrer}'.`,
             ].join("")
             let mailto = document.getElementById("mailto");
             mailto.setAttribute("href", mailtoString);

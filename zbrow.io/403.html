@@ -62,7 +62,7 @@
                 "mailto:admin@mzborowski.com?",
                 "subject=Unexpected 403 error&",
                 `body=I was expecting to be able to access content at ${document.URL}.`,
-                `The link I followed was from ${document.referrer}.`,
+                `The link I followed was from '${document.referrer}'.`,
             ].join("")
             let mailto = document.getElementById("mailto");
             mailto.setAttribute("href", mailtoString);
