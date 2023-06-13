@@ -20,10 +20,13 @@ clean:
 	rm -rf stage/*
 
 dev-up: staging
-	docker run -d --name $(SITE_NAME) -p80:80 -v ./stage:/usr/share/nginx/html nginx
+	#docker run -d --name $(SITE_NAME) -p80:80 -v ./stage:/usr/share/nginx/html nginx
+	docker run -d --name $(SITE_NAME) -p80:80 -v ./zbrow.io:/usr/share/nginx/html nginx
 
 dev-down:
 	docker rm -f $(SITE_NAME)
+
+dev-restart: dev-down dev-up
 
 package: clean staging
 	mkdir -p dist
