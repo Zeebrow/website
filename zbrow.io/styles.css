@@ -62,6 +62,12 @@ h1 {
   text-align: center;
 }
 
+.adspace {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
 .adspace-horiz {
   margin: 10px auto;
   max-width: 500px;

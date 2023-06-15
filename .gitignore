@@ -3,5 +3,6 @@ zbrow.io/img/*
 !zbrow.io/img/.gitignore
 dist
 stage
+build
 tmp
 sourceme
