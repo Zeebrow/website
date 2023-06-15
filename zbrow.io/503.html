@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Server Error</title>
+    </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        .content {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .wrench {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 1;
+            margin-top: 30px;
+            margin-bottom: -30px;
+        }
+
+        .nut {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: grey;
+            top: 115px;
+            right: 65px;
+            z-index: 2;
+        }
+        .nut-space {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: 7px;
+            right: 7px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .head {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: grey;
+            bottom: 65px;
+            left: 65px;
+        }
+        .head-space {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            bottom: 18px;
+            left: 17px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .handle {
+            position: absolute;
+            width: 25px;
+            height: 150px;
+            transform: rotate(45deg);
+            background-color: grey;
+        }
+
+        .code {
+            padding-bottom: 40px;
+        }
+
+    </style>
+    <body>
+        <div class="content">
+            <h1 class="code">503</h1>
+            <div class="wrench">
+                <div class="nut">
+                    <div class="nut-space"></div>
+                </div>
+                <div class="handle"></div>
+                <div class="head">
+                    <div class="head-space">
+                    </div>
+                </div>
+            </div>
+            <p class="message">The site you are trying to reach is undergoing maintenance. Please try again later.</p>
+            <p class="message">If the problem persists, please email the <a id="mailto">site admin</a>.</p>
+        </div>
+        <script>
+            let mailtoString = [
+                "mailto:admin@mzborowski.com?",
+                "subject=Unexpected 503 error&",
+                `body=There is an outage at ${document.URL}.`,
+                `The link I followed was from '${document.referrer}'.`,
+            ].join("")
+            let mailto = document.getElementById("mailto");
+            mailto.setAttribute("href", mailtoString);
+        </script>
+    </body>
+</html>
