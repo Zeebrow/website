@@ -11,16 +11,16 @@
     <body>
         <!--------------------------- site-menubar --------------------------->
         <!-- <script src="site-header.js"></script> -->
-        
+
         <div class="site-menubar">
             <span class="left">
-                <a class="hilite" href="/">
+                <a class="hilite-menubar" href="/">
                     <div class="menu-item">
                         Home
                     </div>
                 </a>
                 <div class="divider"></div>
-                <a class="hilite" href="/notes.html">
+                <a class="hilite-menubar" href="/notes.html">
                     <div class="menu-item">
                         Notes
                     </div>
@@ -47,16 +47,16 @@
                 <div class="divider"></div>
             </span>
             <span class="right">
-                <a class="hilite" href="/about.html">
-                    <div class="menu-item">
+                <a class="hilite-menubar" href="/about.html">
+                    <div class="current-page menu-item">
                         About
                     </div>
                 </a>
                 
                 <div class="divider"></div>
-                    <div class="current-page menu-item">
-                        Thanks
-                    </div>
+                <div class="menu-item">
+                    Thanks
+                </div>
                 <div class="divider"></div>
                 <div class="menu-item">
                     <label for="darkmode-toggle">
@@ -69,44 +69,47 @@
         </div>
 
         <!--------------------------- page content --------------------------->
-        <h1>Biblibidography</h1>
-        <p class="page-description">I finally made it</p>
+        <div class="page-container">
+            <h1>Biblibidography</h1>
+            <p class="page-description">I finally made it</p>
+            <content>
+                <container class="sidebar-left">
+                </container>
+                <div class="content-divider"></div>
+                
+                <main>
+                    <p>Check out these people and the work they do:</p>
+                    <div class="cool-person">
+                        <p>👍 you</p>
+                        <ul>
+                            <li><a href="">your site</a></li>
+                            <li><a href="">your github</a></li>
+                            <li><a href="">your youtube</a></li>
+                            <li><a href="">etc</a></li>
+                        </ul>
+                    </div>
+                    <br/>
+                    <p>I use these technologies for my work:</p>
+                    <button>add my stuff</button>
 
-        <content>
-            <container class="sidebar-left">
-            </container>
-            <div class="content-divider"></div>
-            
-            <main>
-                <p>Check out these people and the work they do:</p>
-                <div class="cool-person">
-                    <p>👍 you</p>
-                    <ul>
-                        <li><a href="">your site</a></li>
-                        <li><a href="">your github</a></li>
-                        <li><a href="">your youtube</a></li>
-                        <li><a href="">etc</a></li>
-                    </ul>
-                </div>
-                <br/>
-                <p>I use these technologies for my work:</p>
-                <button>add my stuff</button>
+                </main>
 
-            </main>
+                <div class="content-divider"></div>
+                <container class="sidebar-right">
+                    <img alt="sleppy cat" src="img/cat-1.jpg">
+                    <img alt="must be play cat" src="img/cat-2.jpg">
+                    <img alt="attentive cat" src="img/cat-3.jpg">
+                    <img alt="fel aslep stalkin cat" src="img/cat-4.jpg">
+                    <img alt="blue eyes white cat" src="img/cat-5.jpg">
+                    <img alt="family movie night" src="img/cat-6.jpg">
+                    <img alt="on teh job cat" src="img/cat-7.jpg">
+                    <img alt="pozin cat" src="img/cat-8.jpg">
+                    <img alt="i have not seen this cat, i no not what you speak of cat" src="img/cat-9.jpg">
+                </container>
+            </content>
 
-            <div class="content-divider"></div>
-            <container class="sidebar-right">
-                <img alt="sleppy cat" src="img/cat-1.jpg">
-                <img alt="must be play cat" src="img/cat-2.jpg">
-                <img alt="attentive cat" src="img/cat-3.jpg">
-                <img alt="fel aslep stalkin cat" src="img/cat-4.jpg">
-                <img alt="blue eyes white cat" src="img/cat-5.jpg">
-                <img alt="family movie night" src="img/cat-6.jpg">
-                <img alt="on teh job cat" src="img/cat-7.jpg">
-                <img alt="pozin cat" src="img/cat-8.jpg">
-                <img alt="i have not seen this cat, i no not what you speak of cat" src="img/cat-9.jpg">
-            </container>
-        </content>
+        </div>
+
         <footer>
             <hr />
             <address>

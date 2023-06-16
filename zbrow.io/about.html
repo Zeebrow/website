@@ -70,36 +70,38 @@
 
 
         <!--------------------------- page content --------------------------->
-        <h1>About</h1>
-        <content>
-            <container class="sidebar-left">
-            </container>
-            <div class="content-divider hidden"></div>
-            <main>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>last updated</td>
-                            <td> : </td>
-                            <td>{{BUILD_DATE}}</td>
-                        </tr>
-                        <tr>
-                            <td>version</td>
-                            <td> : </td>
-                            <td>{{GIT_HASH}}</td>
-                        </tr>
-                        <tr>
-                            <td>source</td>
-                            <td> : </td>
-                            <td>{{GIT_SRC}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </main>
-            <div class="content-divider hidden"></div>
-            <container class="sidebar-right">
-            </container>
-        </content>
+        <div class="page-container">
+            <h1>About</h1>
+            <content>
+                <container class="sidebar-left">
+                </container>
+                <div class="content-divider hidden"></div>
+                <main>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>last updated</td>
+                                <td> : </td>
+                                <td>{{BUILD_DATE}}</td>
+                            </tr>
+                            <tr>
+                                <td>version</td>
+                                <td> : </td>
+                                <td>{{GIT_HASH}}</td>
+                            </tr>
+                            <tr>
+                                <td>source</td>
+                                <td> : </td>
+                                <td>{{GIT_SRC}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+                <div class="content-divider hidden"></div>
+                <container class="sidebar-right">
+                </container>
+            </content>
+        </div>
 
         <footer>
             <hr />

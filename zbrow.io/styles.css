@@ -38,6 +38,10 @@ main {
   min-width: 50%;
 }
 
+.page-container {
+  min-height: 100vh;
+}
+
 content {
     font-size: 20px;
     padding: 40px;
