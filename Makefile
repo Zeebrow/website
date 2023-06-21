@@ -18,14 +18,19 @@ staging:
 		-e 's/{{BUILD_DATETIME}}/$(BUILD_DATETIME)/' \
 		-e 's/{{GIT_HASH}}/$(GIT_HASH)/' \
 		-e 's|{{GIT_SRC}}|$(GIT_SRC)|' stage/*.html
+	jq -n \
+		--arg build_date "$(BUILD_DATE)" \
+		--arg build_datetime "$(BUILD_DATETIME)" \
+		--arg git_hash "$(GIT_HASH)" \
+		--arg git_src "$(GIT_SRC)" \
+		'$$ARGS.named' > stage/buildstamp.json
 
 clean:
 	rm -rf dist/*
 	rm -rf stage/*
 
 dev-up: staging
-	#docker run -d --name $(SITE_NAME) -p80:80 -v ./stage:/usr/share/nginx/html nginx
-	docker run -d --name $(SITE_NAME) -p80:80 -v ./zbrow.io:/usr/share/nginx/html nginx
+	docker run -d --name $(SITE_NAME) -p80:80 -v ./stage:/usr/share/nginx/html nginx
 
 dev-down:
 	docker rm -f $(SITE_NAME)
@@ -46,48 +51,36 @@ set-debug:
 		ansible-playbook -e DEBUG_SITE=$(SITE_NAME) $${ANSIBLE_PB_SET_DEBUG}
 
 build-lxc: clean-lxc staging
-	tar -czvf /home/$(USER)/.ssh-bkup-$(SITE_NAME).tar.gz -C /home/$(USER)/ .ssh/
-	tar -czvf /home/$(USER)/.aws-bkup-$(SITE_NAME).tar.gz -C /home/$(USER)/ .aws/
 	mkdir -p $(TAINER) build
-
-	LANG=en_US.UTF-8 sudo debootstrap --no-check-gpg jammy $(TAINER)
+	sudo debootstrap --no-check-gpg jammy $(TAINER)
 	sudo mount -o bind /dev/pts $(TAINER)/dev/pts
 	sudo mount -o bind /proc $(TAINER)/proc
 	sudo touch $(TAINER)/etc/locale.gen 
-	sudo mount -o bind,ro /etc/locale.gen $(TAINER)/etc/locale.gen
-
+	sudo chroot $(TAINER) /bin/bash -c 'locale-gen en_US.UTF-8'
 	# install required packages
 	echo 'deb http://us.archive.ubuntu.com/ubuntu/ jammy universe' | sudo tee -a $(TAINER)/etc/apt/sources.list
-	sudo chroot $(TAINER) /bin/bash -c 'apt update -y'
-	sudo chroot $(TAINER) /bin/bash -c 'apt install -y openssh-server'
-	sudo chroot $(TAINER) /bin/bash -c 'apt install -y awscli nginx'
-
+	sudo chroot $(TAINER) /bin/bash -c 'apt-get update -y'
+	sudo chroot $(TAINER) /bin/bash -c 'apt-get install -y openssh-server'
 	# setup ansible user
 	sudo chroot $(TAINER) /bin/bash -c "useradd -m $(USER)"
 	echo "$(USER) ALL=(ALL) NOPASSWD: ALL" | sudo tee $(TAINER)/etc/sudoers.d/ansible-sudo
-
 	# setup passwordless ssh for ansible user
 	sudo chroot $(TAINER) /bin/bash -c 'mkdir /home/$(USER)/.ssh'
 	cat /home/$(USER)/.ssh/id_rsa.pub | sudo tee $(TAINER)/home/$(USER)/.ssh/authorized_keys
 	sudo chroot $(TAINER) /bin/bash -c 'chown -R $(USER):$(USER) /home/$(USER)/.ssh'
-
+	#
 	# the rest of the owl
-
-
+	#
 	# clean up
 	sudo umount $(TAINER)/dev/pts
 	sudo umount $(TAINER)/proc
-	sudo umount $(TAINER)/etc/locale.gen
-
-	# package
-	pushd build
-		sudo tar -czf $(ARTIFACT) -C $(TAINER)/ .
-		sha256sum $(ARTIFACT) > SHA256SUMS
-		sudo chown $(USER) $(ARTIFACT)
-	popd
+	sudo tar -czf build/$(ARTIFACT) -C $(TAINER)/ .
+	sha256sum build/$(ARTIFACT) > build/SHA256SUMS
+	sudo chown $(USER) build/$(ARTIFACT)
 
 deploy-lxc:
-	ssh-keygen -f "/home/$(USER)/.ssh/known_hosts" -R "192.168.1.215"
+	. ./sourceme; \
+		ssh-keygen -f "/home/$(USER)/.ssh/known_hosts" -R $${ZBROW_IO_STAGING_IP}
 	. ./sourceme; \
 		ansible-playbook $${ANSIBLE_PLAYBOOK}
 	. ./sourceme; \
@@ -96,6 +89,5 @@ deploy-lxc:
 clean-lxc:
 	sudo umount $(TAINER)/dev/pts || /bin/true
 	sudo umount $(TAINER)/proc || /bin/true
-	sudo umount $(TAINER)/etc/locale.gen || /bin/true
 	sudo rm -rf $(TAINER)
 	rm -rf build/
